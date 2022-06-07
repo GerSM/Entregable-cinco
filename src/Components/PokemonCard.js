@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/stylesCards.css'
 
 const PokemonCard = ({pokemonNameUrl}) => {
 
@@ -16,25 +17,25 @@ const PokemonCard = ({pokemonNameUrl}) => {
     
 
     return (
-        <div className="col-sm-6 col-md-4 col-lg-3 p-3">
-            <div className='card h-100' 
+            <div className='card' 
                 onClick={() => navigate(`/pokemon/${pokemon.id}`)}>
                 <div className="card-body">
-                    <h2>{pokemon.name}</h2>
-                    <h3>{pokemon.types?.[0]?.type.name}/
+                    <div className="container-img">
+                        <img src={pokemon.sprites?.front_default} className="pokemon-image" />
+                    </div>
+                    <h2 className='name'>{pokemon.name}</h2>
+                    <h3 className='types'>{pokemon.types?.[0]?.type.name}/
                     {pokemon.types?.[1]?.type.name}</h3>
-                    <img src={pokemon.sprites?.other["official-artwork"].front_default} className=" w-100" />
-                        
-                    <h3>{pokemon.base_experience} <b>Exp</b></h3>
-                    <ul>
+                   
+                    <h3 className='exp'>{pokemon.base_experience} <b>Exp</b></h3>
+                    <ul className='card-stats'>
                         <li><h4><b>HP: </b> {pokemon.stats?.[0].base_stat}</h4></li>
-                        <li><h4><b>Attack:</b>{pokemon.stats?.[1].base_stat}</h4></li>
-                        <li><h4><b>Special:</b>{pokemon.stats?.[3].base_stat}</h4></li>
+                        <li><h4><b>Attack: </b>{pokemon.stats?.[1].base_stat}</h4></li>
+                        <li><h4><b>Special: </b>{pokemon.stats?.[3].base_stat}</h4></li>
                         <li><h4><b>Defense: </b>{pokemon.stats?.[2].base_stat}</h4></li>
                     </ul>
                 </div>
             </div>
-        </div>
     );
 };
 

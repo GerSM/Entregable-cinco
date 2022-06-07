@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { changeUser } from '../store/slices/userName.slice';
 import { useDispatch } from 'react-redux';
 
+
 const UserLogin = () => {
 
     const [ userName, setUserName ] = useState("")
@@ -16,10 +17,15 @@ const UserLogin = () => {
         navigate("/pokemon")
     }
     return (
-        <div>
-            <h1>User Input</h1>
-            <input type="text" value={userName} onChange={e => setUserName(e.target.value)}/>
-            <button onClick={getName} >Enviar</button>
+        <div className='form-login'>
+            <h1 className='greeting'>!Hola Entrenador!</h1>
+                <div className='container'>
+                    <h3 className='instructions'>Para poder comenzar, dame tu nombre</h3>
+                    <form>
+                        <input className='input-name' type="text" value={userName} onChange={e => setUserName(e.target.value)} placeholder="Nombre..."/>
+                        <button className='button-start' onClick={getName} >Comenzar</button>
+                    </form>
+            </div>
         </div>
     );
 };

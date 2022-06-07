@@ -1,0 +1,56 @@
+.form-login{
+    display: flex;
+
+}
+
+h1{
+    margin: 10px auto;
+    padding: 25px;
+    color: red;
+    font-size: 40px;
+    text-shadow: -2px -2px 2px black;
+}
+
+.container{
+    position: absolute;
+    top: 450px;
+    left: 40%;
+    width: 500px;
+    transform: translate(-20%, -20%);   
+}
+
+input, button{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.input-name{
+    background-color: rgb(250, 204, 204);
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+    cursor: auto;
+}
+
+.button-start{
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(93, 93, 255);
+    color: white;
+}
+
+.button-start:hover{
+    background-color: blue;
+    width: 155px;
+    height: 55px;
+}

@@ -17,12 +17,40 @@ const PokemonDetails = () => {
 
     return (
         <div>
-            <h1>Pokemon Details</h1>
-            <p>Accediendo al personaje con id: <b>{id}</b></p>
-            <h1>{pokemon.name}</h1>
-            <img src={pokemon.sprites?.other["official-artwork"].front_default} alt="" />
-            <h2><b>Height:</b>{(pokemon.height*10)} cm</h2>
-            <h2><b>Weight:</b>{(pokemon.weight/10)} kg</h2>
+            <div className="img-pokemon">
+                <img src={pokemon.sprites?.other["official-artwork"].front_default} alt="" />
+            </div>
+            <div className='principal-information'>
+                <p><b># {id}</b></p>
+                <h1>{pokemon.name}</h1>
+                <h3><b>Height:</b>{(pokemon.height*10)} cm</h3>
+                <h3><b>Weight:</b>{(pokemon.weight/10)} kg</h3>
+            </div> 
+            <div className="info-two">
+                <div className='info-type'>
+                    <h2>Tipo</h2>
+                    <h3>{pokemon.types?.[0]?.type.name}</h3> 
+                    <h3>{pokemon.types?.[1]?.type.name}</h3>
+                </div> 
+                <div className="info-abilities">
+                    <h2>Habilidades</h2>
+                    <h3>{pokemon.abilities?.[0]?.ability.name}</h3>
+                    <h3>{pokemon.abilities?.[1]?.ability.name}</h3>
+                </div>  
+                <div className="stats-list">
+                    <ul className='list'>
+                        <li><h4><b>HP: </b> {pokemon.stats?.[0].base_stat}</h4></li>
+                        <li><h4><b>Attack: </b>{pokemon.stats?.[1].base_stat}</h4></li>
+                        <li><h4><b>Defense: </b>{pokemon.stats?.[2].base_stat}</h4></li>
+                        <li><h4><b>Special: </b>{pokemon.stats?.[3].base_stat}</h4></li>
+                        <li><h4><b>Special defense: </b>{pokemon.stats?.[4].base_stat}</h4></li>
+                        <li><h4><b>Speed: </b>{pokemon.stats?.[5].base_stat}</h4></li>
+                    </ul>
+                </div> 
+            </div>
+
+            
+            
         </div>
     );
 };

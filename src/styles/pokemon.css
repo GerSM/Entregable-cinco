@@ -1,0 +1,66 @@
+.container-form{
+    display: flex;
+}
+.form-pokemon-search{
+    display: flexbox;
+    margin: 0 auto;
+}
+
+.container-form .form-pokemon-search .welcome-usr{
+    text-shadow: -2px -2px 2px black;
+}
+
+select, input, button{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.container-form .form-pokemon-search .search-box .dropdown-toggle{
+    background-color: rgb(93, 93, 255);
+    color: white;
+    padding: 10px;
+    border-radius: 25px 0 0 25px;
+    border: none;
+    cursor: pointer;
+    width: 125px;
+    height: 43px;
+}
+
+.container-form .form-pokemon-search .search-box .dropdown-toggle:hover{
+    background-color: blue;
+    width: 130px;
+    width: 130px;
+    height: 48px;
+}
+
+.container-form .form-pokemon-search .search-box .pokemon-search{
+    background-color: rgb(250, 204, 204);
+    padding: 10px;
+    border: none;
+    cursor: auto;
+}
+
+.container-form .form-pokemon-search .search-box .btn-search{
+    background-color: rgb(93, 93, 255);
+    width: 100px;
+    color: white;
+    padding: 10px;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    cursor: pointer;
+}
+.container-form .form-pokemon-search .search-box .btn-search:hover{
+    background-color: blue;
+    width: 105px;
+    height: 48px;
+}
+
+.d-cards{
+    margin: 25px;
+    padding: 10px;
+    max-width: 10vh;
+    display: flex;
+}

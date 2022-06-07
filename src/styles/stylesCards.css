@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+.card{
+    display: flex;
+    justify-content: center;
+    overflow: inherit;
+}
+
+.card .card-body{ 
+    font-family: sans-serif;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 25px;
+    border: 5px solid black;
+    box-shadow: 5px 5px 5px blue;
+}
+
+.card .card-body:hover{
+    border: 8px solid black;
+    box-shadow: 10px 10px 15px blue;
+}
+
+.card .card-body .container-img{
+    display: flex;
+    background-color: red;
+    border-radius: 20px 20px 0 0;
+    height: 30px;
+}
+.card .card-body .container-img .pokemon-image{
+    margin: -80px auto;
+    width: 130px;
+    height: 160px;
+    z-index: 9;
+}
+
+.card .card-body .container-img .pokemon-image:hover{
+    margin: -90px auto;
+}
+
+.card .card-body .name{
+    margin: 0 auto;
+    padding: 40px 5px;
+}
+
+.card .card-body .types{
+    margin: -25px 40px;
+    color: red;
+}
+
+.card .card-body .exp{
+    margin: 20px 70px;
+    color: gray;
+}
+
+.card .card-body .card-stats{
+    display: flex;
+    position: fixed;
+    list-style: none;
+    padding: 5px;
+    
+}
+
+
+
+
+
