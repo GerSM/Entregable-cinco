@@ -18,7 +18,7 @@ const PokemonDetails = () => {
     return (
         <div>
             <div className="img-pokemon">
-                <img src={pokemon.sprites?.other["official-artwork"].front_default} alt="" />
+                <img src={pokemon.sprites?.other["official-artwork"].front_default} alt="pokemon" />
             </div>
             <div className='principal-information'>
                 <p><b># {id}</b></p>
