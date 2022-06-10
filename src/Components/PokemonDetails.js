@@ -11,7 +11,7 @@ const PokemonDetails = () => {
     useEffect(() => {
         axios.get (`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then(res => setPokemon(res.data))
-    }, [setPokemon])
+    }, [id])
 
     console.log(pokemon)
 
