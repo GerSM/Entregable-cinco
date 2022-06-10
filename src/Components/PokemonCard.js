@@ -28,12 +28,16 @@ const PokemonCard = ({pokemonNameUrl}) => {
                     {pokemon.types?.[1]?.type.name}</h3>
                    
                     <h3 className='exp'>{pokemon.base_experience} <b>Exp</b></h3>
-                    <ul className='card-stats'>
-                        <li><h4><b>HP: </b> {pokemon.stats?.[0].base_stat}</h4></li>
-                        <li><h4><b>Attack: </b>{pokemon.stats?.[1].base_stat}</h4></li>
-                        <li><h4><b>Special: </b>{pokemon.stats?.[3].base_stat}</h4></li>
-                        <li><h4><b>Defense: </b>{pokemon.stats?.[2].base_stat}</h4></li>
-                    </ul>
+                    <div className='ul-stats'>    
+                        <ul className='card-stats'>
+                            <li><h4><b>HP: </b> {pokemon.stats?.[0].base_stat}</h4></li>
+                            <li><h4><b>Attack: </b>{pokemon.stats?.[1].base_stat}</h4></li>
+                        </ul>
+                        <ul className='card-stats'>    
+                            <li><h4><b>Special: </b>{pokemon.stats?.[3].base_stat}</h4></li>
+                            <li><h4><b>Defense: </b>{pokemon.stats?.[2].base_stat}</h4></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
     );

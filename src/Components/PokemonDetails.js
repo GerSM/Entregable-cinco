@@ -11,7 +11,7 @@ const PokemonDetails = () => {
     useEffect(() => {
         axios.get (`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then(res => setPokemon(res.data))
-    }, [])
+    }, [setPokemon])
 
     console.log(pokemon)
 
@@ -39,12 +39,12 @@ const PokemonDetails = () => {
                 </div>  
                 <div className="stats-list">
                     <ul className='list'>
-                        <li><h4><b>HP: </b> {pokemon.stats?.[0].base_stat}</h4></li>
-                        <li><h4><b>Attack: </b>{pokemon.stats?.[1].base_stat}</h4></li>
-                        <li><h4><b>Defense: </b>{pokemon.stats?.[2].base_stat}</h4></li>
-                        <li><h4><b>Special: </b>{pokemon.stats?.[3].base_stat}</h4></li>
-                        <li><h4><b>Special defense: </b>{pokemon.stats?.[4].base_stat}</h4></li>
-                        <li><h4><b>Speed: </b>{pokemon.stats?.[5].base_stat}</h4></li>
+                        <li><h4><b>HP: </b> <progress id="hp" max="100" value={pokemon.stats?.[0].base_stat}/> {pokemon.stats?.[0].base_stat}%</h4></li>
+                        <li><h4><b>Attack: </b><progress id="attack" max="100" value={pokemon.stats?.[1].base_stat}/> {pokemon.stats?.[1].base_stat}%</h4></li>
+                        <li><h4><b>Defense: </b><progress id="defense" max="100" value={pokemon.stats?.[2].base_stat}/> {pokemon.stats?.[2].base_stat}%</h4></li>
+                        <li><h4><b>Special: </b><progress id="special" max="100" value={pokemon.stats?.[3].base_stat}/> {pokemon.stats?.[3].base_stat}%</h4></li>
+                        <li><h4><b>Special defense: </b><progress id="specialdefense" max="100" value={pokemon.stats?.[4].base_stat}/> {pokemon.stats?.[4].base_stat}%</h4></li>
+                        <li><h4><b>Speed: </b><progress id="speed" max="100" value={pokemon.stats?.[5].base_stat}/> {pokemon.stats?.[5].base_stat}%</h4></li>
                     </ul>
                 </div> 
             </div>

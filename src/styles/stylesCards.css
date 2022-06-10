@@ -27,37 +27,42 @@
     height: 30px;
 }
 .card .card-body .container-img .pokemon-image{
-    margin: -80px auto;
+    margin: -40px auto;
     width: 130px;
     height: 160px;
     z-index: 9;
 }
 
 .card .card-body .container-img .pokemon-image:hover{
-    margin: -90px auto;
+    margin: -60px auto;
 }
 
 .card .card-body .name{
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 40px 5px;
 }
 
 .card .card-body .types{
-    margin: -25px 40px;
+    margin: -30px 40px;
     color: red;
 }
 
 .card .card-body .exp{
-    margin: 20px 70px;
+    margin: 30px 70px;
     color: gray;
 }
 
-.card .card-body .card-stats{
+.card .card-body .ul-stats{
     display: flex;
-    position: fixed;
+}
+
+.card .card-body .ul-stats .card-stats{
+    margin-top: -55px;
     list-style: none;
+    position: relative;
     padding: 5px;
-    
+    max-width: 80px;
+    max-height: 80px;
 }
 
 
